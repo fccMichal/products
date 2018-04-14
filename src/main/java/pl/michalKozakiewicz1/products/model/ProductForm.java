@@ -1,4 +1,4 @@
-package pl.michalKozakiewicz1.products.Model;
+package pl.michalKozakiewicz1.products.model;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -7,11 +7,11 @@ import javax.validation.constraints.Size;
 public class ProductForm {
 
         @NotNull
-        @Size(min=2, max=30)
+        @Size(min=2, max=30, message = "Name must have at least 2 signs")
         private String name;
 
         @NotNull
-        @Min(18)
+        @Min(10, message ="Description must have at least 10 signs")
         private String description;
 
     public String getName() {
