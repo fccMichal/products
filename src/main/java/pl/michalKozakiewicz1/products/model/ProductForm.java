@@ -11,7 +11,7 @@ public class ProductForm {
         private String name;
 
         @NotNull
-        @Min(10, message ="Description must have at least 10 signs")
+        @Size(min=5, message = "Description must have at least 5 signs")
         private String description;
 
     public String getName() {
